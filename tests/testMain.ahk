@@ -19,9 +19,11 @@ ExitApp, % errorcode
 return
 
 
-/********
- The Tests
- ********/
+/*
+*********
+The Tests
+*********
+*/
 
 class NumberTestSuite
 {
