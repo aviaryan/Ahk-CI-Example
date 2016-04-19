@@ -6,4 +6,4 @@ install:
 build: off
 
 test_script: 
-  - autohotkeyu32.exe /ErrorStdOut "tests/testMain.ahk" 2>&1 |more
+  - autohotkey /ErrorStdOut "tests/testMain.ahk" 2>&1 |more
