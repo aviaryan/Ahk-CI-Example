@@ -1,5 +1,7 @@
 # Ahk Continuous Integration using AppVeyor
 
+[![Build status](https://ci.appveyor.com/api/projects/status/5510uj2ey77lc09i?svg=true)](https://ci.appveyor.com/project/aviaryan/ahk-ci-example)
+
 This is an example project to demonstrate how to use [AppVeyor](https://www.appveyor.com/) and Uberi's [Yunit](https://github.com/Uberi/Yunit) to set up continuous testing for your project. 
 
 
