@@ -1,6 +1,6 @@
 # Ahk Continuous Integration using AppVeyor
 
-This is an example project to demonstrate how to use [AppVeyor](https://www.appveyor.com/) and Uberi's YUnit to set up continuous testing for your project. 
+This is an example project to demonstrate how to use [AppVeyor](https://www.appveyor.com/) and Uberi's [Yunit](https://github.com/Uberi/Yunit) to set up continuous testing for your project. 
 
 
 ### Steps
@@ -13,6 +13,14 @@ This is an example project to demonstrate how to use [AppVeyor](https://www.appv
 6. Spend some time going through its code. It should be easy enough to understand how to write tests. Additionally [Yunit docs](https://github.com/Uberi/Yunit) should be helpful.
 7. Once you have written the tests, run them locally by executing `tests\test.bat` on the terminal.
 8. After pushing the tests to GitHub, you need to sign in to [appveyor](https://www.appveyor.com/) and add the repo to start the CI process.
+
+
+### Using custom test framework
+
+You can use a custom test framework as long as it does the following -
+
+1. It sends test details to stdout
+2. It exits the script with ExitCode 1 in case one of the test fails.
 
 
 ### Need Help ?
