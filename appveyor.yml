@@ -5,5 +5,8 @@ install:
 
 build: off
 
+before_test:
+  - cmd: cd tests
+
 test_script: 
-  - "C:/Program Files/AutoHotkey/AutoHotkeyU32.exe" /ErrorStdOut "tests/testMain.ahk" 2>&1 |more
+  - test.bat
