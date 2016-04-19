@@ -1,6 +1,8 @@
-#Include <Yunit\Yunit>
-#Include <Yunit\Window>
-#Include <Yunit\StdOut>
+; #Include <Yunit\Yunit>
+; #Include <Yunit\Window>
+; #Include <Yunit\StdOut>
+#Include %A_ScriptDir%\..\lib\Yunit\Yunit.ahk
+#Include %A_ScriptDir%\..\lib\Yunit\StdOut.ahk
 
 Yunit.Use(YunitStdOut).Test(NumberTestSuite, StringTestSuite)
 ExitApp
