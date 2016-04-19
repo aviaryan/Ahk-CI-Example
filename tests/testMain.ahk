@@ -1,10 +1,11 @@
 ; #Include <Yunit\Yunit>
-; #Include <Yunit\Window>
 ; #Include <Yunit\StdOut>
 #Include %A_ScriptDir%\..\lib\Yunit\Yunit.ahk
 #Include %A_ScriptDir%\..\lib\Yunit\StdOut.ahk
 
 t := Yunit.Use(YunitStdOut).Test(NumberTestSuite, StringTestSuite)
+
+; loop through the results, check if there was a FAIL case
 errorcode := 0
 for k,v in t.results {
     if IsObject(v){
@@ -15,7 +16,12 @@ for k,v in t.results {
     }
 }
 ExitApp, % errorcode
+return
 
+
+/********
+ The Tests
+ ********/
 
 class NumberTestSuite
 {
@@ -24,7 +30,7 @@ class NumberTestSuite
         this.x := 123
         this.y := 456
     }
-    
+
     Test_Sum()
     {
         Yunit.assert(this.x + this.y == 579)
@@ -34,11 +40,6 @@ class NumberTestSuite
     {
         Yunit.assert(this.x / this.y < 1)
         Yunit.assert(this.x / this.y > 0.25)
-    }
-    
-    Test_Multiplication()
-    {
-        Yunit.assert(this.x * this.y == 56088)
     }
     
     End()
@@ -66,16 +67,7 @@ class NumberTestSuite
             Yunit.assert(this.x / this.y < -0.25)
         }
         
-        Test_Multiplication()
-        {
-            Yunit.assert(this.x * this.y == -56088)
-        }
-        
-        ; Test_Fails()
-        ; {
-        ;     Yunit.assert(this.x - this.y == 0, "oops!")
-        ; }
-        
+        ; uncomment this for a failing test -123 - 456 != 0
         ; Test_Fails_NoMessage()
         ; {
         ;     Yunit.assert(this.x - this.y == 0)
@@ -107,24 +99,12 @@ class StringTestSuite
         Yunit.assert(SubStr(this.b, 2, 2) == "de")
     }
     
-    Test_InStr()
-    {
-        Yunit.assert(InStr(this.a, "c") == 3)
-    }
-    
     Test_ExpectedException_Success()
     {
         this.ExpectedException := Exception("SomeCustomException")
         if SubStr(this.a, 3, 1) == SubStr(this.b, 1, 1)
             throw Exception("SomeCustomException")
     }
-    
-    ; Test_ExpectedException_Fail()
-    ; {
-    ;     this.ExpectedException := "fubar"
-    ;     Yunit.assert(this.a != this.b)
-    ;     ; no exception thrown!
-    ; }
     
     End()
     {
