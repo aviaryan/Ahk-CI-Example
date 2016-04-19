@@ -32,6 +32,7 @@ class Yunit
             instance.results[cls.__class] := obj := {}
             instance.TestClass(obj, cls)
         }
+        return instance
     }
     
     Update(Category, Test, Result)
@@ -86,7 +87,6 @@ class Yunit
     Assert(Value, params*)
     {
         Message := (params[1] = "") ? "FAIL" : params[1]
-        adsl
         if (!Value)
             throw Exception(Message, -1)
     }

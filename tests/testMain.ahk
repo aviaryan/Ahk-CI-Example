@@ -4,8 +4,17 @@
 #Include %A_ScriptDir%\..\lib\Yunit\Yunit.ahk
 #Include %A_ScriptDir%\..\lib\Yunit\StdOut.ahk
 
-Yunit.Use(YunitStdOut).Test(NumberTestSuite, StringTestSuite)
-ExitApp
+t := Yunit.Use(YunitStdOut).Test(NumberTestSuite, StringTestSuite)
+errorcode := 0
+for k,v in t.results {
+    if IsObject(v){
+        for k2, v2 in v {
+            if (v2 != "0")
+                errorcode := 1
+        }
+    }
+}
+ExitApp, % errorcode
 
 
 class NumberTestSuite
