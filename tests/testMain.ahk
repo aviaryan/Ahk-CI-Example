@@ -71,15 +71,15 @@ class NumberTestSuite
             Yunit.assert(this.x * this.y == -56088)
         }
         
-        Test_Fails()
-        {
-            Yunit.assert(this.x - this.y == 0, "oops!")
-        }
+        ; Test_Fails()
+        ; {
+        ;     Yunit.assert(this.x - this.y == 0, "oops!")
+        ; }
         
-        Test_Fails_NoMessage()
-        {
-            Yunit.assert(this.x - this.y == 0)
-        }
+        ; Test_Fails_NoMessage()
+        ; {
+        ;     Yunit.assert(this.x - this.y == 0)
+        ; }
 
         End()
         {
@@ -119,12 +119,12 @@ class StringTestSuite
             throw Exception("SomeCustomException")
     }
     
-    Test_ExpectedException_Fail()
-    {
-        this.ExpectedException := "fubar"
-        Yunit.assert(this.a != this.b)
-        ; no exception thrown!
-    }
+    ; Test_ExpectedException_Fail()
+    ; {
+    ;     this.ExpectedException := "fubar"
+    ;     Yunit.assert(this.a != this.b)
+    ;     ; no exception thrown!
+    ; }
     
     End()
     {
