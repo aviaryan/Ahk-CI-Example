@@ -24,6 +24,8 @@ You can use a custom test framework as long as it does the following -
 1. It sends test details to stdout
 2. It exits the script with ExitCode 1 in case one of the test fails.
 
+See [testCustomSimple.ahk](tests/testCustomSimple.ahk) for an example.
+
 
 ### Need Help ?
 
