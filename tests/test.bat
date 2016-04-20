@@ -15,6 +15,7 @@ for /r %%i in (*.ahk) do (
 		set err_level=1
 	)
 	type testoutput.txt
+	echo.
 )
 
 
