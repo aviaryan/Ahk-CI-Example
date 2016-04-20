@@ -2,7 +2,7 @@
 
 [![Build status](https://ci.appveyor.com/api/projects/status/5510uj2ey77lc09i/branch/master?svg=true)](https://ci.appveyor.com/project/aviaryan/ahk-ci-example/branch/master)
 
-This is an example project to demonstrate how to use [AppVeyor](https://www.appveyor.com/) and Uberi's [Yunit](https://github.com/Uberi/Yunit) to set up continuous testing for your project. 
+This is an example project to demonstrate how to use [AppVeyor](https://www.appveyor.com/) and Uberi's [Yunit](https://github.com/Uberi/Yunit) to set up continuous testing for your AutoHotkey project. 
 
 
 ### Steps
@@ -29,4 +29,4 @@ See [testCustomSimple.ahk](tests/testCustomSimple.ahk) for an example.
 
 ### Need Help ?
 
-Open an issue or tweet me at [@aviaryan123](https://twitter.com/aviaryan123)
+Post in the [AHK topic](https://autohotkey.com/boards/viewtopic.php?f=6&t=16168) or tweet me at [@aviaryan123](https://twitter.com/aviaryan123)
